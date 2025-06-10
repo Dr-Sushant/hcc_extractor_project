@@ -47,4 +47,7 @@ hcc-extractor-project/
 ├── LICENSE.md                     # CMS data = public domain  
 └── README.md
 
-
+## 🏥 Clinical Relevance  
+- **Tested with real GP notes** (see `data/test_patient.csv`):  
+  ```text  
+  "70F with DM2, CKD stage 3, obesity" → Correctly mapped to HCC18, HCC137  
