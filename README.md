@@ -29,11 +29,22 @@ To build a lightweight pipeline that identifies and maps relevant ICD codes asso
 
 ## 📂 Directory Structure
 
-```bash
-hcc_extractor_project/
-├── README.md
-├── main.py or hcc_extractor.ipynb
-├── sample_note.txt
-├── output.csv
-└── requirements.txt (optional)
+hcc-extractor-project/  
+├── data/  
+│   ├── icd10-2025-mappings.csv    # Raw CMS codes (e.g., "E1165 → HCC18")  
+│   ├── test_patient.csv           # Sample patient data (e.g., "65M, DM2, CAD")  
+│   └── change_log.md              # Track CMS updates (e.g., "2025: Added U09.9")  
+├── src/  
+│   ├── hcc_extractor.py           # Main logic (ICD-10 → HCC mapper)  
+│   └── utils.py                   # Helper functions (e.g., CSV cleaner)  
+├── outputs/                       # Generated reports  
+│   ├── patient_123_hcc_codes.json # Example output  
+│   └── audit_trail.log            # For compliance  
+├── docs/  
+│   ├── clinical_validation.md     # How you tested against real notes  
+│   └── hcc_rules_2025.pdf         # CMS documentation  
+├── requirements.txt               # Python dependencies  
+├── LICENSE.md                     # CMS data = public domain  
+└── README.md
+
 
