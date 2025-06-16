@@ -1,0 +1,23 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment files
+.env
+*.env
+*.ini
+
+# System
+.DS_Store
+Thumbs.db
+
+# Data files
+*.csv
+*.tsv
+*.xlsx
+*.json
