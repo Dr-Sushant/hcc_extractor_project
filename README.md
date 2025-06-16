@@ -55,3 +55,11 @@ hcc-extractor-project/
 ## Benchmarks  
 - Accuracy: 92% on `test_patient.csv`  
 - Speed: Processes 1,000 notes/minute (vs. manual coding at 10-15/doctor/day)  
+
+## ⚠️ Usage Disclaimer
+
+This project is provided for educational and demonstration purposes only.  
+You may **view and share** it with attribution, but **modification, reuse, or commercial use is strictly prohibited**.
+
+© 2025 Dr. Sushant Tapase | Licensed under CC BY-NC-ND 4.0  
+See [LICENSE](LICENSE) for details.
