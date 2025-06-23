@@ -21,3 +21,4 @@ Thumbs.db
 *.tsv
 *.xlsx
 *.json
+__pycache__/
