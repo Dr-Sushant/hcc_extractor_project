@@ -2,6 +2,9 @@
 
 A clinical NLP mini-project designed to extract Hierarchical Condition Category (HCC) diagnosis codes from unstructured clinical text.
 
+![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)
+[🔗 View License](./LICENSE.txt)
+
 ## 💡 Objective
 
 To build a lightweight pipeline that identifies and maps relevant ICD codes associated with HCC risk stratification, from free-text medical records.
