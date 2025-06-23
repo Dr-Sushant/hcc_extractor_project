@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧠 HCC Extractor Project
 
 A clinical NLP mini-project designed to extract **Hierarchical Condition Category (HCC)** diagnosis codes from unstructured clinical text.
@@ -67,6 +68,8 @@ hcc-extractor-project/
 ├── requirements.txt               # Python dependencies  
 ├── LICENSE.md                     # CMS data = public domain  
 └── README.md
+
+📁 Streamlit App Path: [`src/streamlit_app.py`](./src/streamlit_app.py)
 
 
 ---
@@ -138,5 +141,6 @@ This software is provided "as is", without warranty of any kind. It is intended 
 git add src/hcc_extractor.py
 git commit -m "Clean version of HCC extractor logic"
 git push
+
 
 
