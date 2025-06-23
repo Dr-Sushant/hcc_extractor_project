@@ -3,7 +3,7 @@
 A clinical NLP mini-project designed to extract Hierarchical Condition Category (HCC) diagnosis codes from unstructured clinical text.
 
 ![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)
-[🔗 View License](./LICENSE.txt)
+[🔗 View License](./LICENSE.pdf)
 
 ## 💡 Objective
 
