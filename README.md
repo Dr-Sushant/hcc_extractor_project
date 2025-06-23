@@ -135,5 +135,8 @@ Custom licensing, support, and collaboration options are available.
 
 This software is provided "as is", without warranty of any kind. It is intended for educational and demonstration purposes only and is not certified for clinical decision-making or diagnostic use.
 
+git add src/hcc_extractor.py
+git commit -m "Clean version of HCC extractor logic"
+git push
 
 
