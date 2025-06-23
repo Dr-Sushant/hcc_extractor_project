@@ -63,3 +63,4 @@ You may **view and share** it with attribution, but **modification, reuse, or co
 
 © 2025 Dr. Sushant Tapase | Licensed under CC BY-NC-ND 4.0  
 See [LICENSE](LICENSE) for details.
+[LICENSE.pdf](https://github.com/user-attachments/files/20865645/LICENSE.pdf)
