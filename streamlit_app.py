@@ -1,6 +1,10 @@
+import sys
+import os
+sys.path.append(os.path.dirname(__file__))
+
 import streamlit as st
 import pandas as pd
-from src.hcc_extractor import extract_hcc_codes
+from hcc_extractor import extract_hcc_codes
 
 # Page config
 st.set_page_config(page_title="🧠 HCC Risk Code Extractor", layout="centered")
