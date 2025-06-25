@@ -1,5 +1,6 @@
-<<<<<<< HEAD
 # 🧠 HCC Extractor Project
+
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Streamlit-blue?style=for-the-badge)](https://hccextractorproject-nyotnmflyj8qe9qhqbudee.streamlit.app/)
 
 A clinical NLP mini-project designed to extract **Hierarchical Condition Category (HCC)** diagnosis codes from unstructured clinical text.
 
