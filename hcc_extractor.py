@@ -1,49 +1,43 @@
-"""
-hcc_extractor.py
+import re
 
-A simple clinical NLP script to extract Hierarchical Condition Category (HCC) codes
-from unstructured clinical text using keyword matching.
-
-Author: Dr. Sushant Tapase
-License: CC BY-NC-ND 4.0 — See LICENSE.md
-"""
-
-def extract_hcc_codes(note):
+def is_negated(phrase: str, text: str) -> bool:
     """
-    Extracts HCC codes from clinical text using basic keyword matching.
-
-    Args:
-        note (str): The unstructured clinical note (plain text).
-
-    Returns:
-        list: A list of matching HCC codes (e.g., ['HCC18', 'HCC85'])
+    Checks for negation patterns (e.g., 'no diabetes', 'denies asthma').
+    Looks for negation words within 3 words before the phrase.
     """
+    pattern = r"(no|denies|without)\s+(\w+\s*){0,3}" + re.escape(phrase)
+    return bool(re.search(pattern, text.lower()))
 
-    # Mapping of clinical terms to HCC codes (expandable)
-    hcc_keywords = {
-        "diabetes": "HCC18",
-        "copd": "HCC111",
-        "chf": "HCC85",  # Congestive Heart Failure
-        "ckd": "HCC134",  # Chronic Kidney Disease
-        "chronic kidney disease": "HCC134",
-        "heart failure": "HCC85"
+def extract_hcc_codes(clinical_note: str) -> list:
+    """
+    Extract matched phrases with HCC and ICD-10 codes.
+    """
+    text = clinical_note.lower()
+    matches = []
+
+    # Phrase → (HCC code, ICD-10 code)
+    hcc_full_dict = {
+        "diabetes mellitus": ("HCC18", "E11.9"),
+        "diabetes": ("HCC18", "E11.9"),
+        "chronic kidney disease": ("HCC134", "N18.9"),
+        "ckd": ("HCC134", "N18.9"),
+        "copd": ("HCC111", "J44.9"),
+        "congestive heart failure": ("HCC85", "I50.9"),
+        "chf": ("HCC85", "I50.9"),
+        "hypertension": ("HCC96", "I10"),
+        "asthma": ("HCC112", "J45.909"),
+        "stroke": ("HCC100", "I63.9"),
+        "depression": ("HCC77", "F32.9"),
+        "coronary artery disease": ("HCC96", "I25.10"),
+        "cad": ("HCC96", "I25.10"),
+        "alzheimer": ("HCC51", "G30.9")
     }
 
-    note = note.lower()  # Normalize input text
-    found_codes = set()
+    for phrase, (hcc_code, icd_code) in hcc_full_dict.items():
+        if phrase in text:
+            if not is_negated(phrase, text):
+                matches.append((phrase, hcc_code, icd_code))
 
-    for keyword, hcc in hcc_keywords.items():
-        if keyword in note:
-            found_codes.add(hcc)
-
-    return list(found_codes)
+    return matches
 
 
-# Optional demo block for direct script execution
-if __name__ == "__main__":
-    sample_note = """
-    70-year-old male with a history of diabetes, CKD, and CHF.
-    Mild COPD noted on spirometry.
-    """
-    codes = extract_hcc_codes(sample_note)
-    print("Extracted HCC Codes:", codes)
