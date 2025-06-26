@@ -1,5 +1,5 @@
 import gradio as gr
-from hcc_extractor import extract_hcc_codes  # Assuming hcc_extractor.py is in root
+from hcc_extractor import extract_hcc_codes
 
 def extract_codes_from_note(note):
     if note.strip():
