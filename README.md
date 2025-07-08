@@ -5,6 +5,30 @@
 Try the HCC Code Extractor now:  
 👉 [Launch on Hugging Face Spaces](https://huggingface.co/spaces/Dr-Sushant/hcc-extractor)
 
+## Supported Conditions (v1)
+
+## 🧪 Test Inputs (Try These Examples)
+
+The HCC Extractor currently supports the following high-impact conditions:
+
+| Disease | Sample Note | ICD-10 |
+|--------|-------------|--------|
+| **1. Type 2 Diabetes** | `Patient has type 2 diabetes mellitus.` | E11.9 |
+| **2. Diabetes (General)** | `Patient is diabetic and on insulin.` | E11.9 |
+| **3. Chronic Kidney Disease (CKD)** | `CKD stage 3 noted with raised creatinine.` | N18.3 |
+| **4. COPD** | `Patient suffers from chronic obstructive pulmonary disease.` | J44.9 |
+| **5. HIV/AIDS** | `HIV-positive patient with CD4 count below 200.` | B20 |
+| **6. Sepsis** | `Admitted with signs of septic shock.` | R65.20 |
+| **7. Leukemia** | `Acute myeloid leukemia diagnosed on biopsy.` | C92.00 |
+| **8. Depression** | `History of major depressive disorder.` | F32.9 |
+
+> 🧠 Paste these clinical notes directly into the app for accurate HCC code detection!
+
+---
+
+🩺 More diseases will be added soon via intelligent entity extraction using **scispaCy + UMLS**.
+
+
 [![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Streamlit-blue?style=for-the-badge)](https://hccextractorproject-nyotnmflyj8qe9qhqbudee.streamlit.app/)
 
 A clinical NLP mini-project designed to extract **Hierarchical Condition Category (HCC)** diagnosis codes from unstructured clinical text.
