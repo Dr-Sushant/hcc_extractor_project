@@ -7,20 +7,18 @@ Try the HCC Code Extractor now:
 
 ## Supported Conditions (v1)
 
-## 🧪 Test Inputs (Try These Examples)
+## 🧪 Try These Demo Inputs
 
-The HCC Extractor currently supports the following high-impact conditions:
+Paste any of the following into the app to test HCC extraction:
 
-| Disease | Sample Note | ICD-10 |
-|--------|-------------|--------|
+| Condition | Example Note | ICD-10 |
+|----------|---------------------------|--------|
 | **1. Type 2 Diabetes** | `Patient has type 2 diabetes mellitus.` | E11.9 |
-| **2. Diabetes (General)** | `Patient is diabetic and on insulin.` | E11.9 |
-| **3. Chronic Kidney Disease (CKD)** | `CKD stage 3 noted with raised creatinine.` | N18.3 |
-| **4. COPD** | `Patient suffers from chronic obstructive pulmonary disease.` | J44.9 |
-| **5. HIV/AIDS** | `HIV-positive patient with CD4 count below 200.` | B20 |
-| **6. Sepsis** | `Admitted with signs of septic shock.` | R65.20 |
-| **7. Leukemia** | `Acute myeloid leukemia diagnosed on biopsy.` | C92.00 |
-| **8. Depression** | `History of major depressive disorder.` | F32.9 |
+| **2. Chronic Kidney Disease (CKD)** | `CKD stage 3 noted with raised creatinine.` | N18.3 |
+| **3. HIV/AIDS** | `HIV-positive patient with CD4 count below 200.` | B20 |
+| **4. Leukemia** | `Acute myeloid leukemia diagnosed on biopsy.` | C92.00 |
+
+> ✅ These conditions are currently supported. More are coming soon!
 
 > 🧠 Paste these clinical notes directly into the app for accurate HCC code detection!
 
