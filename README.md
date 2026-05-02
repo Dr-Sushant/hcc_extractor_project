@@ -2,8 +2,9 @@
 
 ## 🚀 Live Demo
 
-Try the HCC Code Extractor now:  
-👉 [Launch on Hugging Face Spaces](https://huggingface.co/spaces/Dr-Sushant/hcc-extractor)
+**Try it here:** [HCC Extractor Live Demo](https://stickers-royalty-today-sir.trycloudflare.com)
+
+> ⚠️ The demo runs on Google Colab. If the link doesn't work, the session may have expired. Clone the repo and run locally using `streamlit run app.py`
 
 ## Supported Conditions (v1)
 
