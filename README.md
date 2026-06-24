@@ -1,3 +1,5 @@
+<img width="553" height="361" alt="HCC_Extractor" src="https://github.com/user-attachments/assets/f061e478-90fd-4af8-9b54-7ff5e5572079" />
+
 # 🩺 Clinical ICD-10 Extractor
 
 A lightweight clinical NLP application that extracts **ICD-10 diagnosis codes** from free-text clinical notes and maps them to corresponding **HCC (Hierarchical Condition Category) risk categories**.
