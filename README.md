@@ -188,6 +188,15 @@ hcc-extractor/
 * Clinical Documentation Improvement (CDI)
 * Healthcare AI Prototyping
 
+## Planned Enhancements
+
+- Expanded ICD-10 coverage
+- COPD detection (J44.9)
+- Sepsis detection (R65.20)
+- Depression detection (F32.9)
+- ICD-10 autocomplete
+- CSV export
+- Clinical negation handling
 ---
 
 # ⚠️ Disclaimer
