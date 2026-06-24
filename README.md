@@ -1,177 +1,203 @@
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dr-Sushant/hcc_extractor_project/blob/main/hcc_demo_colab.ipynb)
+# 🩺 Clinical ICD-10 Extractor
 
-# 🧠 HCC Extractor Project
+A lightweight clinical NLP application that extracts **ICD-10 diagnosis codes** from free-text clinical notes and maps them to corresponding **HCC (Hierarchical Condition Category) risk categories**.
 
-## 🚀 Live Demo
+🚀 **Live Demo**
 
-**Try it here:** [HCC Extractor Live Demo](https://stickers-royalty-today-sir.trycloudflare.com)
-
-> ⚠️ The demo runs on Google Colab. If the link doesn't work, the session may have expired. Clone the repo and run locally using `streamlit run app.py`
-
-## Supported Conditions (v1)
-
-## 🧪 Try These Demo Inputs
-
-Paste any of the following into the app to test HCC extraction:
-
-| Condition | Example Note | ICD-10 |
-|----------|---------------------------|--------|
-| **1. Type 2 Diabetes** | `Patient has type 2 diabetes mellitus.` | E11.9 |
-| **2. Chronic Kidney Disease (CKD)** | `CKD stage 3 noted with raised creatinine.` | N18.3 |
-| **3. HIV/AIDS** | `HIV-positive patient with CD4 count below 200.` | B20 |
-| **4. Leukemia** | `Acute myeloid leukemia diagnosed on biopsy.` | C92.00 |
-
-> ✅ These conditions are currently supported. More are coming soon!
-
-> 🧠 Paste these clinical notes directly into the app for accurate HCC code detection!
+https://huggingface.co/spaces/Dr-Sushant/hcc-extractor
 
 ---
 
-🩺 More diseases will be added soon via intelligent entity extraction using **scispaCy + UMLS**.
+# 👨‍⚕️ About the Author
 
+**Dr. Sushant Tapase**
 
-[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Streamlit-blue?style=for-the-badge)](https://hccextractorproject-nyotnmflyj8qe9qhqbudee.streamlit.app/)
+MBBS | Clinical Research | MBA (Healthcare & Hospital Management) | M.Tech Biomedical Data Science
 
-A clinical NLP mini-project designed to extract **Hierarchical Condition Category (HCC)** diagnosis codes from unstructured clinical text.
-
-📜 License: CC BY-NC-ND 4.0 for educational use.
-💼 Contact for commercial licensing.
-![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)
-[🔗 License](./LICENSE.pdf) • [🚀 Try the Demo](http://localhost:8501) <!-- Update with public URL when deployed -->
+This project demonstrates practical applications of clinical NLP, healthcare coding, and rule-based information extraction from unstructured medical text.
 
 ---
 
-## 💡 Objective
+# 💡 Project Objective
 
-To build a lightweight clinical NLP pipeline that identifies and maps relevant ICD-10 codes associated with **HCC risk stratification**, from free-text medical records.
+Healthcare documentation is largely unstructured.
 
----
+This project demonstrates how clinical notes can be automatically analyzed to identify diagnosis concepts and map them to ICD-10 codes and HCC risk categories using a lightweight rule-based NLP pipeline.
 
-## 🌟 Features
+The application accepts either:
 
-- 🔍 Extract HCC codes using keyword and NER (spaCy)
-- 🧠 Clinical negation detection (beta)
-- 📋 Export results as CSV (one click)
-- 🧪 Streamlit UI for interactive demo
-- 🧰 Modular code for future scaling
+* Free-text clinical notes
+* Direct ICD-10 code input
 
----
-
-## 🛠️ Tools & Libraries
-
-- Python 3
-- spaCy / scispaCy
-- Regular Expressions
-- Pandas
-- Streamlit
-- CSV / JSON for output
+and returns structured coding information.
 
 ---
 
-## 🧪 Sample Workflow
+# 🌟 Features
 
-| Step        | Description                                      |
-|-------------|--------------------------------------------------|
-| Input       | De-identified or dummy clinical note             |
-| Processing  | Tokenization → Keyword Match → HCC Mapping       |
-| Output      | Structured list of HCC codes (.csv or .json)     |
+✅ Clinical note processing
 
----
+✅ ICD-10 diagnosis code extraction
 
-## 📂 Project Structure
+✅ HCC risk category mapping
 
+✅ Multiple condition detection
 
+✅ Direct ICD-10 code input support
 
-hcc-extractor-project/  
-├── data/  
-│   ├── icd10-2025-mappings.csv    # Raw CMS codes (e.g., "E1165 → HCC18")  
-│   ├── test_patient.csv           # Sample patient data (e.g., "65M, DM2, CAD")  
-│   └── change_log.md              # Track CMS updates (e.g., "2025: Added U09.9")  
-├── src/  
-│   ├── hcc_extractor.py           # Main logic (ICD-10 → HCC mapper)  
-│   └── utils.py                   # Helper functions (e.g., CSV cleaner)  
-├── outputs/                       # Generated reports  
-│   ├── patient_123_hcc_codes.json # Example output  
-│   └── audit_trail.log            # For compliance  
-├── docs/  
-│   ├── clinical_validation.md     # How you tested against real notes  
-│   └── hcc_rules_2025.pdf         # CMS documentation  
-├── requirements.txt               # Python dependencies  
-├── LICENSE.md                     # CMS data = public domain  
-└── README.md
+✅ Interactive Streamlit interface
 
-📁 Streamlit App Path: [`src/streamlit_app.py`](./src/streamlit_app.py)
-
+✅ Hugging Face deployment
 
 ---
 
-## 🏥 Clinical Relevance
+# 🔬 Sample Workflow
 
-> Example: `"70F with DM2, CKD stage 3, obesity"`  
-> → Mapped to `HCC18`, `HCC134`, `HCC22` ✅
+Clinical Note
 
-**Benchmarks:**
+⬇️
 
-- Accuracy: **92%** on test notes  
-- Speed: **1,000+ notes/minute** (vs. manual coding at ~10/day)
+Condition Detection
 
----
+⬇️
 
-## 🚀 Run Locally
+ICD-10 Mapping
 
-```bash
-# 1. Create virtual environment
-python3 -m venv venv
-source venv/bin/activate
+⬇️
 
-# 2. Install dependencies
-pip install -r requirements.txt
+HCC Mapping
 
-# 3. Launch Streamlit app
-streamlit run streamlit_app.py
+⬇️
 
-MIT License (Educational Use Only) + Commercial Licensing Option
-
-Copyright (c) 2025 Dr. Sushant Tapase
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to use,
-copy, and share the Software for personal, academic, or non-commercial purposes,
-subject to the following conditions:
-
-1. **Attribution**: You must give appropriate credit to the author.
-2. **Non-Commercial Use Only**: You may not use the Software for commercial purposes.
-3. **No Derivatives**: You may not modify or create derivative works from this Software
-   without explicit permission from the author.
-
-The above rights are granted under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0)**.  
-See: https://creativecommons.org/licenses/by-nc-nd/4.0/
+Structured Output
 
 ---
 
-### 📌 Commercial Use
+# 🧪 Demo Clinical Notes
 
-If you are a business, healthcare startup, academic lab, or commercial entity and wish to:
+## Example 1 – Diabetes
 
-- Integrate this project into a product,
-- Modify or build upon it,
-- Use it for revenue-generating purposes,
+Patient has type 2 diabetes mellitus and requires regular monitoring.
 
-You must obtain a separate **commercial license** from the author.
+**Expected Detection**
 
-📬 Contact: **dr.sushant.tapase@gmail.com**
+ICD-10: E11.9
 
-Custom licensing, support, and collaboration options are available.
+HCC: 19
 
 ---
 
-### ❗ Disclaimer
+## Example 2 – Chronic Kidney Disease
 
-This software is provided "as is", without warranty of any kind. It is intended for educational and demonstration purposes only and is not certified for clinical decision-making or diagnostic use.
+Patient diagnosed with chronic kidney disease stage 3.
 
-git add src/hcc_extractor.py
-git commit -m "Clean version of HCC extractor logic"
-git push
+**Expected Detection**
 
+ICD-10: N18.3
 
+HCC: 138
 
+---
+
+## Example 3 – HIV
+
+HIV-positive patient with declining CD4 count.
+
+**Expected Detection**
+
+ICD-10: B20
+
+HCC: 1
+
+---
+
+## Example 4 – Leukemia
+
+Acute myeloid leukemia diagnosed following bone marrow biopsy.
+
+**Expected Detection**
+
+ICD-10: C92.00
+
+HCC: 8
+
+---
+
+## Example 5 – Multiple Conditions
+
+Patient has type 2 diabetes mellitus and chronic kidney disease stage 3.
+
+**Expected Detection**
+
+ICD-10: E11.9 → HCC: 19
+
+ICD-10: N18.3 → HCC: 138
+
+---
+
+## Example 6 – ICD-10 Direct Input
+
+E11.9, N18.3
+
+**Expected Detection**
+
+Diabetes
+
+Chronic Kidney Disease
+
+---
+
+# 🛠️ Technology Stack
+
+* Python
+* Pandas
+* Regular Expressions (Regex)
+* Streamlit
+* Clinical Coding Logic
+* ICD-10 Mapping
+* HCC Risk Mapping
+
+---
+
+# 📁 Repository Structure
+
+```text
+hcc-extractor/
+│
+├── app.py
+├── hcc_extractor.py
+├── icd_hcc_cleaned.csv
+├── requirements.txt
+├── README.md
+│
+├── data/
+│   └── sample_input.txt
+│
+└── sample_note.txt
+```
+
+---
+
+# 🎯 Potential Applications
+
+* Clinical NLP Demonstrations
+* Medical Coding Education
+* ICD-10 Training
+* Healthcare Analytics
+* Risk Adjustment Workflows
+* Clinical Documentation Improvement (CDI)
+* Healthcare AI Prototyping
+
+---
+
+# ⚠️ Disclaimer
+
+This project is intended for educational and demonstration purposes only.
+
+It is not certified for clinical decision support, diagnosis, reimbursement, regulatory reporting, or production healthcare use.
+
+---
+
+# 📄 License
+
+MIT License
